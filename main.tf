@@ -1,11 +1,11 @@
 terraform {
   backend "s3" {
-    bucket = "mybucket-terraform-state1-file"
-    key    = "env/dev/terraform.tfstate"
-    region = "ap-northeast-1"
-    # dynamodb_table = "terraform-lock"
-    use_lockfile = true
-    encrypt      = true
+    bucket         = "mybucket-terraform-state1-file"
+    key            = "env/dev/terraform.tfstate"
+    region         = "ap-northeast-1"
+    dynamodb_table = "terraform-lock"
+    # use_lockfile = true
+    encrypt = true
   }
 }
 provider "aws" {
