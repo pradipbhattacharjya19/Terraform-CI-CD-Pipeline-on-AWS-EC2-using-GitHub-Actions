@@ -33,4 +33,7 @@ session.logs
 terraform.rc
 
 #bootstap
-bootstrap/
+bootstrap/.terraform/
+bootstrap/*.tfstate
+bootstrap/*.tfstate.backup
+bootstrap/.terraform.lock.hcl
