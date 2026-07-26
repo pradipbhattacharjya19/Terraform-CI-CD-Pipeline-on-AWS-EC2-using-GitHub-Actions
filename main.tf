@@ -1,11 +1,11 @@
 terraform {
   backend "s3" {
-    bucket         = "mybucket-terraform-state1-file"
-    key            = "env/dev/terraform.tfstate"
-    region         = "ap-northeast-1"
+    bucket = "mybucket-terraform-state1-file"
+    key    = "env/dev/terraform.tfstate"
+    region = "ap-northeast-1"
     # dynamodb_table = "terraform-lock"
-    use_lockfile   = true
-    encrypt = true
+    use_lockfile = true
+    encrypt      = true
   }
 }
 provider "aws" {
@@ -49,7 +49,7 @@ resource "aws_security_group" "web_sg" {
     to_port     = 22
     protocol    = "tcp"
 
-    cidr_blocks = ["106.219.151.97/32"]
+    cidr_blocks = ["152.59.166.255/32"]
   }
 
   # 📤 Outbound (generally open rehta hai)
